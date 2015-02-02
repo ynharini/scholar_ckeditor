@@ -65,7 +65,9 @@ function(editor) {　　　　
             var myheight = filenameMetadata['height']
             var placeHolderImageIndex = dialog.getContentElement("info", "place_holder").getValue();
             var html = movieUrl(dialog);
+            var placeholder_image = "<img src='"+getPlaceHolderImageUrl(dialog)+"' style='width: 100%; height:180px;' />";
             var src = "<div id='player' class='fixed-controls' style='width: 100%; height:180px;'>";
+            src += placeholder_image;
             src += "</div>";
             var loader = CKEDITOR.document.getById('FlashPreviewBox');
             loader.setHtml(src);
