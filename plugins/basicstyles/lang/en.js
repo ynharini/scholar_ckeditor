@@ -4,7 +4,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 CKEDITOR.plugins.setLang( 'basicstyles', 'en', {
 	bold: 'Bold',
-	italic: 'Italic',
+	italic: 'Emphasis',
 	strike: 'Strikethrough',
 	subscript: 'Subscript',
 	superscript: 'Superscript',
