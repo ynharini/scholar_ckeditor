@@ -175,6 +175,11 @@
                                 else
                                     widget.element.setStyle('float', align);
                             }
+                            var months = [ "January", "February", "March", "April", "May", "June",
+                                "July", "August", "September", "October", "November", "December" ];
+                            month = months[(new Date).getMonth()];
+                            date = (new Date).getDate();
+                            year = (new Date).getFullYear();
 
                             if (typeof e.code === 'string') {
                                 if (widget.element.$.firstChild) {
@@ -185,7 +190,8 @@
                                 widget.element.data('oembed', url);
                                 widget.element.data('oembed_provider', provider.name);
                                 widget.element.addClass('oembed-provider-' + provider.name);
-
+                                widget.element.addClass('figure');
+                                widget.element.appendHtml("<div class='caption' style='color: #999'>Media embedded " + month + " " + date + ", " + year + "</div>");
                                 elementAdded = true;
                             } else if (typeof e.code[0].outerHTML === 'string') {
 
@@ -197,6 +203,8 @@
                                 widget.element.data('oembed', url);
                                 widget.element.data('oembed_provider', provider.name);
                                 widget.element.addClass('oembed-provider-' + provider.name);
+                                widget.element.addClass('figure');
+                                widget.element.appendHtml("<div class='caption' style='color: #999'>Media embedded " + month + " " + date + ", " + year + "</div>");
 
                                 elementAdded = true;
                             } else {
