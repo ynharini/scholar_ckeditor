@@ -321,7 +321,7 @@ CgCkCallbacks = (function() {
     }
 
     function notMathFormula(previous_p) {
-        previous_p.getHtml().search('math-tex') < 0;
+       return previous_p.getHtml().search('math-tex') < 0;
     }
 
     function keyupDeleteWrongSpans() {
